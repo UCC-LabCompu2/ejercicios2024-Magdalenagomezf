@@ -73,3 +73,15 @@ function convertirGR(id){
     }
 
 }
+let mostrar_ocultar=(valor)=>{
+    if(valor==="val_mostrar"){
+        document.getElementsByName("unDiv")[0].style.display="block";
+    } else if (valor ==="val_ocultar"){
+        document.getElementsByName("unDiv")[0].style.display="none";
+    }
+}
+let suma=() =>{
+    const s1 = Number(document.getElementById("nums1").value);
+    const s2 = Number(document.getElementById("nums2").value);
+    document.getElementById("totalS").value=s1+s2;
+}
