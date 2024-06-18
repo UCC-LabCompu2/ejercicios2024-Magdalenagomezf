@@ -61,7 +61,7 @@ function convertirGR(id){
     let grad,rad;
     //TODO: Agregar mensajes de error cuando se agregan letras.
     //TODO: Debería admitir números con coma.
-    if (id=="grados") {
+    if (id=="grados"){
         grad = document.getElementById("grados").value;
         rad = (grad * Math.PI) / 180;
         document.getElementById("radianes").value=rad;
