@@ -258,12 +258,12 @@ function dibujarCuadriculado() {
 }
 
 function dibujarImagen(posX, posY) {
-    const canvas = document.getElementById("myCanvas");
-    const ctx = canvas.getContext("2d");
-
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
     console.log(posX, posY);
-    const img = new Image();
-    img.src = "images/auto.png";
+
+    var img = new Image();
+    img.src = "images/auto.png"
     img.onload = function () {
         canvas.width = canvas.width;
         ctx.drawImage(img, posX, posY);
@@ -275,6 +275,27 @@ function dibujarImagen(posX, posY) {
             ctx.drawImage(img,posX,posY);
         }
     }
+
+}
+x=0;
+dx=2;
+function animarAuto(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width=canvas.width;
+    var img=new Image();
+    img.src= "images/auto.png"
+
+
+    img.onload = function () {
+        ctx.drawImage(img, x, 100);
+    }
+
+    if(x>canvas.width){
+        x=0;
+    }
+    x+=dx;
 }
 
 let mostrarDialog=()=>{
